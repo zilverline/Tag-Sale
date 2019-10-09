@@ -1,7 +1,9 @@
 <h1>Item Description</h1>
         <% Item.all.each do |item| %>
 
-<ul>
-    <li><%= item.name %></li>
+
+    <li>Item Name: <%= item.name %></li>
+    <li>Item Description: <%= item.description %></li>
+    <li>Item Price: $<%= item.price %></li>
+    <li>Item Category: <%= item.category.name %></li><br/>
     <% end %>
-</ul>

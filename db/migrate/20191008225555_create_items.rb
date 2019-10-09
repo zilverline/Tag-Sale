@@ -4,6 +4,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :name
       t.boolean :new
       t.text :description
+      t.float :price
       t.integer :user_id
       t.integer :category_id
 

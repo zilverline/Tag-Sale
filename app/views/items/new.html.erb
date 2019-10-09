@@ -1,0 +1,33 @@
+<h1>Create New Item To Sell it Fast</h1>
+
+<%= form_for(@item) do |f| %>
+
+<%= f.label :name %> :
+<%= f.text_field :name %><br>
+<br/>
+<%= f.label :new %> :
+<%= f.check_box :new %>(check box if item is new)<br>
+<br/>
+
+<%= f.label :category %> :
+<%= f.text_field :category_name, list: "categories_autocomplete" %>
+<datalist id="categories_autocomplete">
+<% Category.all.each do |category| %>
+<option value="<%= category.name %>">
+<% end %>
+</datalist>
+<br/>
+<br/>
+
+<%= f.label :description %> :
+<%= f.text_area :description %>
+<br/>
+<br/>
+
+<%= f.label :price %> : $
+<%= f.text_field :price %>
+<br/>
+<br/>
+
+<%= f.submit "List Item" %>
+<% end %>

@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_10_08_225635) do
     t.string "name"
     t.boolean "new"
     t.text "description"
+    t.float "price"
     t.integer "user_id"
     t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false

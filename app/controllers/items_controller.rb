@@ -12,6 +12,11 @@ class ItemsController < ApplicationController
     
     def create 
         @item = Item.new(item_params)
+        if @item.save
+            redirect_to item_path(@item)
+        else
+            redirect_to new_item_path
+        end
     end
 
     def show 
@@ -30,7 +35,7 @@ class ItemsController < ApplicationController
     private 
 
     def item_params
-        params.require(:item).permit(:name, :new, :description)
+        params.require(:item).permit(:name, :new, :description, :price, :category_name)
     end
 
     def find_item
