@@ -1,0 +1,9 @@
+ 
+        <h1>Category: <%= @category.name %></h1>
+    <ul>
+        <% @category.items.each do |item|%>
+
+        <li><%= link_to item.name, item_path(item) %> - listed by (user name) ...(<%= item.description %>) - listed time ago from now </li>
+
+        <% end %>
+    </ul>

@@ -1,6 +1,6 @@
 <h1>Welcome <%= @user.name %></h1>
 
-<h3>This is a list of your current item listed for sale</h3>
+<h3>Current Item Listed for Sale</h3>
 <ul>
     <% @user.items.each do |item| %>
     <li><%= item.name %></li>
