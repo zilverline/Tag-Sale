@@ -16,7 +16,7 @@
               <%= button_to 'Sign in', login_path %>
             <% else %>
               <%= button_to "Log Out", logout_path %>
-              <%= button_to "My Dashboard", user_path(session[:user_id]) %>
+              <%= button_to "My Dashboard", user_items_path(session[:user_id]) %>
             <% end %>
           
     <%= yield %>

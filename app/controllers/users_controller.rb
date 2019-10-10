@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     def show 
         if logged_in?
             @user = User.find_by(id: session[:user_id])
+            redirect_to user_items_path(@user)
         else 
             redirect_to root_path
         end

@@ -1,7 +1,11 @@
 <h1>Items</h1>
+<ul>
         <% @items.each do |item| %>
 
-<ul>
-    <li><%= link_to item.name, item_path(item) %> - category name </li>
+        <li>Item Name: <%= item.name %></li>
+    <li>Item Description: <%= item.description %></li>
+    <li>Item Price: $<%= item.price %></li>
+    <li>Item Category: <%= item.category_name %></li>
+    <%= button_to "Edit Item", edit_item_path(item.id) %><br/>
     <% end %>
 </ul>
