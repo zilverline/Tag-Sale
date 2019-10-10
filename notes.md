@@ -4,12 +4,11 @@ get '/search' => 'pages#search', :as => 'search_page'
 
 #Path     
 MyApp/app/view/pages/
-
 #File 
 search.html.erb
 <h3>Search Result</h3>  
     <% @results.each do |result| %>  
-        <%= result.store.name %> <%= result.name %><br>  
+        <%= result.category.name %> <%= result.name %><br>  
     <% end %>
 
 
