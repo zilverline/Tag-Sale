@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+    before_action :authenticate_user, only: [:show]
+
+    def index 
+        @users = User.all
+    end
     def new 
         @user = User.new
     end
@@ -7,14 +12,19 @@ class UsersController < ApplicationController
     def create 
         @user = User.new(user_params)
         if @user.save
-            render :show
+            login(@user)
+            redirect_to user_path(@user)
         else
-            redirect_to new_user_path
+            render 'new'
         end
     end
 
     def show 
-        @user = User.find(params[:id])
+        if logged_in?
+            @user = User.find_by(id: session[:user_id])
+        else 
+            redirect_to root_path
+        end
     end
 
     def edit 
@@ -22,10 +32,6 @@ class UsersController < ApplicationController
     end
 
     def update
-
-    end
-
-    def destroy 
 
     end
 

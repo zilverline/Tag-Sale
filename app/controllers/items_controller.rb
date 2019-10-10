@@ -11,6 +11,8 @@ class ItemsController < ApplicationController
     end
     
     def create 
+        #byebug
+        #raise params.inspect
         @item = Item.new(item_params)
         if @item.save
             redirect_to item_path(@item)
