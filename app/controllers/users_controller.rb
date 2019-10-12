@@ -21,12 +21,12 @@ class UsersController < ApplicationController
     end
 
     def show 
-        if logged_in?
+        # if logged_in?
             @user = User.find(params[:id])
             render :show
-        else 
-            redirect_to '/'
-        end
+        # else 
+        #     redirect_to '/'
+        # end
     end
 
     def edit 

@@ -54,6 +54,5 @@ ruby '2.6.1'
 * https://rubygems.org
 * https://stackoverflow.com x 1000 ;)
 * https://www.favicon-generator.org
-* https://stackoverflow.com/questions/5661466/test-if-string-is-a-number-in-ruby-on-rails
 
 ### License

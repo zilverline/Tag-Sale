@@ -24,7 +24,8 @@ class ItemsController < ApplicationController
         end
     end
 
-    def show        
+    def show 
+         raise params.inspect     
     end
 
     def edit      
