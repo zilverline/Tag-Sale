@@ -36,6 +36,7 @@ gem 'capybara', '>= 2.15'
 gem 'selenium-webdriver'
 gem 'webdrivers'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'bootstrap'
 
 ### Setup
 * To run this web application you must clone it from git@github.com:jamievullo/Tag-Sale.git goto https://github.com/jamievullo/Tag-Sale copy and clone into your terminal.

@@ -14,13 +14,14 @@
       <%= button_to 'Search by Categories', categories_path %>
       <%= button_to 'Items for Sale', items_path %>
             <% if !logged_in? %>
-              <%= button_to 'Sign Up', new_user_path %> 
+              <%= button_to 'Sign Up', signup_path %> 
               <%= button_to 'Sign in', login_path %>
             <% else %>
-              <%= button_to "My Dashboard", user_items_path(session[:user_id]) %>
-              <%= button_to "Log Out", logout_path %>
+              
+              <%= button_to "Log Out", logout_path, method: :delete %>
             <% end %>
 
     <%= yield %>
+
   </body>
 </html>

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
     protect_from_forgery with: :exception
-    helper_method :current_user, :logged_in?, :authenticate_user, :login
+    helper_method :current_user, :logged_in?, :authenticate_user
 
     private
 
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
         end 
     end  
 
-    def login(user)
-        session[:user_id] = user.id
-    end 
+    # def login(user)
+    #     session[:user_id] = user.id
+    # end 
 end

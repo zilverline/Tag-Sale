@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
-
+    
+    before_action :authenticate_user, except: [:index]
+    before_action :logged_in?, except: [:index]
+    before_action :current_user, except: [:index]
     before_action :find_item, only: [:show, :edit, :update, :destroy]
 
     def index 
@@ -11,11 +14,11 @@ class ItemsController < ApplicationController
     end
     
     def create 
-        #byebug
-        #raise params.inspect
         @item = Item.new(item_params)
+        #byebug
         if @item.save
-            redirect_to item_path(@item)
+            render :show
+            #redirect_to item_path(@item)
         else
             redirect_to new_item_path
         end
