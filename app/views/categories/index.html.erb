@@ -1,7 +1,10 @@
-        <h1>Categories</h1>
+    <h1>Categories</h1>
 <ul>
         <% @categories.each do |category| %>
 
     <li><%= link_to category.name, category_path(category) %></li>
-    <% end %>
+            Top Sellers: <br/><% category.users.uniq.each do |user| %>
+            <%= link_to user.name, user_path(user) %> (<%= category.items.where(user: user).count %>)<br/>
+            <% end %>
+        <% end %>
 </ul>

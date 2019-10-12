@@ -3,7 +3,7 @@
 <h3>Current Item Listed for Sale</h3>
 <ul>
     <% @user.items.each do |item| %>
-    <li><%= link_to item.name, user_item_path(@user, item) %></li>
+    <li><%= link_to item.name, user_item_path(@user, item) %> - $<%= item.price%></li>
     <% end %>
 </ul>
 
