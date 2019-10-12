@@ -3,7 +3,7 @@
     <ul>
         <% @category.items.each do |item|%>
 
-        <li><%= link_to item.name, item_path(item) %> - listed by (user name) ...(<%= item.description %>) - listed time ago from now </li>
+        <li><%= link_to item.name, item_path(item) %> - <%= link_to item.user.name, user_path(item.user) %> ...<%= truncate(item.description, length: 15) %> - <%= time_ago_in_words(item.created_at) %> ago </li>
 
         <% end %>
     </ul>

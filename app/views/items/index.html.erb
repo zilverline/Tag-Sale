@@ -1,7 +1,7 @@
-<h1>Items for Sale Currently</h1>
+<h1>Items for Sale</h1>
 
     <% @items.each do |item| %>
 
     <%= link_to item.name, item_path(item) %> - <%= time_ago_in_words(item.created_at) %> - <%= truncate(item.description, length: 15) %>
- - $<%= item.price %> - <%= item.category_name %><br/>
+ - $<%= item.price %> - <%= link_to item.category_name, category_path(item.category) %><br/>
     <% end %>
