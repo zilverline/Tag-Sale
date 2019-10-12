@@ -16,27 +16,27 @@ This is a small web application that allows Users to signup and list items for s
 ### Technologies
 This application utilizes the Ruby Programming language and several gems (listed)
 ruby '2.6.1'
-gem 'rails', '~> 6.0.0'
-gem 'sqlite3', '~> 1.4'
-gem 'puma', '~> 3.11'
-gem 'sass-rails', '~> 5'
-gem 'webpacker', '~> 4.0'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.7'
-gem 'redis', '~> 4.0'
-gem 'bcrypt'
-gem 'image_processing', '~> 1.2'
-gem 'bootsnap', '>= 1.4.2', require: false
-gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-gem 'web-console', '>= 3.3.0'
-gem 'listen', '>= 3.0.5', '< 3.2'
-gem 'spring'
-gem 'spring-watcher-listen', '~> 2.0.0'
-gem 'capybara', '>= 2.15'
-gem 'selenium-webdriver'
-gem 'webdrivers'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'bootstrap'
+* gem 'rails', '~> 6.0.0'
+* gem 'sqlite3', '~> 1.4'
+* gem 'puma', '~> 3.11'
+* gem 'sass-rails', '~> 5'
+* gem 'webpacker', '~> 4.0'
+* gem 'turbolinks', '~> 5'
+* gem 'jbuilder', '~> 2.7'
+* gem 'redis', '~> 4.0'
+* gem 'bcrypt'
+* gem 'image_processing', '~> 1.2'
+* gem 'bootsnap', '>= 1.4.2', require: false
+* gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+* gem 'web-console', '>= 3.3.0'
+* gem 'listen', '>= 3.0.5', '< 3.2'
+* gem 'spring'
+* gem 'spring-watcher-listen', '~> 2.0.0'
+* gem 'capybara', '>= 2.15'
+* gem 'selenium-webdriver'
+* gem 'webdrivers'
+* gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+* gem 'bootstrap'
 
 ### Setup
 * To run this web application you must clone it from git@github.com:jamievullo/Tag-Sale.git goto https://github.com/jamievullo/Tag-Sale copy and clone into your terminal.
