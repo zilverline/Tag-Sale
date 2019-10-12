@@ -14,11 +14,11 @@ class ItemsController < ApplicationController
     end
     
     def create 
-        @item = Item.new(item_params)
+        @item = current_user.items.build(item_params)
         #byebug
-        if @item.save
-            render :show
-            #redirect_to item_path(@item)
+        if @item.save!
+            #render :show
+            redirect_to user_item_path(current_user, @item)
         else
             redirect_to new_item_path
         end
@@ -27,18 +27,20 @@ class ItemsController < ApplicationController
     def show        
     end
 
-    def edit       
+    def edit      
     end
 
     def update
         if @item.update(item_params)
-            redirect_to item_path(@item)
+            redirect_to user_item_path(current_user, @item)
         else  
             render :edit
         end
     end
 
     def destroy 
+        @item.destroy 
+        redirect_to user_path(current_user)
     end
 
     private 

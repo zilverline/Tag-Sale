@@ -1,11 +1,7 @@
 <h1>Items for Sale Currently</h1>
-<ul>
+
     <% @items.each do |item| %>
 
-    <li>Item Name: <%= item.name %></li>
-    <li>Item Description: <%= item.description %></li>
-    <li>Item Price: $<%= item.price %></li>
-    <li>Item Category: <%= item.category_name %></li>
-    <%= button_to "Edit Item", edit_item_path(item.id) %><br/>
+    <%= link_to item.name, item_path(item) %> - <%= time_ago_in_words(item.created_at) %> - <%= truncate(item.description, length: 15) %>
+ - $<%= item.price %> - <%= item.category_name %><br/>
     <% end %>
-</ul>

@@ -5,4 +5,5 @@
     <li>Item Description: <%= @item.description %></li>
     <li>Item Price: $<%= @item.price %></li>
     <li>Item Category: <%= @item.category_name %></li>
-    <%= button_to "Edit Item", edit_item_path(@item) %><br/>
+    <%= link_to "Edit Item", edit_user_item_path(current_user, @item) %><br/>
+    <%= link_to "Delete Item", @item, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' }%>
