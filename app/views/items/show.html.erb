@@ -15,7 +15,6 @@
     <% else %>
         <li>Seller :<%= link_to @item.user.name, user_path(@item.user) %></li>
         <li>Contact Seller: <%= link_to @item.user.email %></li>
-        <%= link_to "<< Back", items_path %>
     <% end %>
 
 

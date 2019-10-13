@@ -4,21 +4,15 @@ class SessionsController < ApplicationController
     end 
 
     def create
-        #byebug
-        # if auth = request.env["omniauth.auth"]
-        #     @user = User.find_or_create_by_omniauth(auth)
-        #     session[:user_id] = @user.id
-        #     redirect_to root_path
-        # else
-            @user = User.find_by(name: params[:name])
+        @user = User.find_by(name: params[:name])
         
-            if @user && @user.authenticate(params[:password])
-                session[:user_id] = @user.id
-                redirect_to user_path(@user)
-            else
-                render 'new'
-            end  
-        #end   
+        if @user && @user.authenticate(params[:password])
+            session[:user_id] = @user.id
+            #byebug
+            redirect_to user_path(@user)
+        else
+            render 'new'
+        end     
     end
 
     def destroy
@@ -28,7 +22,7 @@ class SessionsController < ApplicationController
 
     private
 
-    # def user_params
+    # def session_params
     #     params.require(:user).permit(:name, :password)
     # end 
 end
