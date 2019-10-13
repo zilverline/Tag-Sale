@@ -37,6 +37,9 @@ ruby '2.6.1'
 * gem 'webdrivers'
 * gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 * gem 'bootstrap'
+* gem 'omniauth'
+* gem 'omniauth-facebook'
+* gem 'dotenv-rails'
 
 ### Setup
 * To run this web application you must clone it from git@github.com:jamievullo/Tag-Sale.git goto https://github.com/jamievullo/Tag-Sale copy and clone into your terminal.

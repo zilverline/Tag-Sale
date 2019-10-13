@@ -17,7 +17,8 @@
       <%= link_to 'All Items for Sale', items_path %><br/>
             <% if !logged_in? %>
               <%= link_to 'Sign Up', signup_path %><br/>
-              <%= link_to 'Sign in', login_path %>
+              <%= link_to 'Sign in', login_path %><br/>
+              <%= link_to "Login via Facebook", "/auth/facebook" %>
             <% else %>
               <%= link_to "My DashBoard", user_path(current_user) %><br/>
               <%= link_to "Log Out", logout_path, method: :delete %>
