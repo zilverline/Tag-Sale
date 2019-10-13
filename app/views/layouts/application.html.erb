@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head><br/><br/>
+  <head> 
     <title>TagSale</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('Tag-Sale Favicon.png'), :rel => 'icon', :type => "image/png" %>
+
   </head>
 
   <body>
   
-      <%= link_to 'Search by Categories', categories_path %><br/>
-      <%= link_to 'Items for Sale', items_path %><br/>
+      <%= link_to 'Browse by Categories', categories_path %><br/>
+      <%= link_to 'All Items for Sale', items_path %><br/>
             <% if !logged_in? %>
               <%= link_to 'Sign Up', signup_path %><br/>
               <%= link_to 'Sign in', login_path %>
             <% else %>
-              
+              <%= link_to "My DashBoard", user_path(current_user) %><br/>
               <%= link_to "Log Out", logout_path, method: :delete %>
             <% end %>
 

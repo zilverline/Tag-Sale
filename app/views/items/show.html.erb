@@ -1,14 +1,22 @@
     <h2><%= @item.name %></h2>
 
+                    <% if @item.image.attached? %>
+        <li>Picture: <%= image_tag(@item.image, style:'width:20%') %></li>
+                    <% end %>
         <li>Item Description: <%= @item.description %></li>
-        <li>Item Price: $<%= @item.price %></li>
-        <li>Item Category: <%= @item.category_name %></li>
-        <li>Contact Seller: <%= link_to @item.user.email %></li>
+        <li>Price: $<%= @item.price %></li>
+        <li>Category: <%= @item.category_name %></li>
+        
 
-    <% if current_user %>
+    <% if current_user == @item.user %>
         <%= link_to "Edit Item", edit_user_item_path(current_user, @item) %><br/>
         <%= link_to "Delete Item", @item, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %><br/>
-        <%= link_to "My Page", user_path(current_user) %>
+        <%= link_to "Back to My Items", user_path(current_user) %>
+    <% else %>
+        <li>Seller :<%= link_to @item.user.name, user_path(@item.user) %></li>
+        <li>Contact Seller: <%= link_to @item.user.email %></li>
+        <%= link_to "<< Back", items_path %>
     <% end %>
+
 
 

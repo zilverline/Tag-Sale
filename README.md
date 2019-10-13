@@ -56,3 +56,6 @@ ruby '2.6.1'
 * https://www.favicon-generator.org
 
 ### License
+
+### Possible Future Changes or upgrades
+* email "masking" for anonymity
