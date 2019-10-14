@@ -1,4 +1,6 @@
-<h1>Login and get Taggin'!!</h1>
+<div class="title-container">
+    <h1>Login and get Taggin'!!</h1>
+</div>
 
 <%= form_tag('/login', method: :post) do %>
 
@@ -8,7 +10,7 @@
     <%= label_tag :password %> :
     <%= password_field_tag :password %>
 
-    <%= submit_tag "Login" %>
+    <%= submit_tag "Login", class: "btn btn-primary" %>
 <% end %> 
 
 

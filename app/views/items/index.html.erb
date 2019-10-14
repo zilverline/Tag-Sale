@@ -1,7 +1,19 @@
-<h1>Recently Posted Items/Items for Sale</h1>
+<div class="title-container">
+   <h1>Recently Posted Items/Items for Sale</h1>
+</div>
+   <div class="items">
+      <% @items.each do |item| %>
+      <div class="item">
+         <div class="thumbnail">
+            <div class="caption">
+               <p>
+                  <%= link_to item.name, item_path(item) %> - <%= time_ago_in_words(item.created_at) %> ago - <%= truncate(item.description, length: 15) %>
+                  - $<%= item.price %> - <%= link_to item.category_name, category_path(item.category) %>
+               </p>
+            </div>
+         </div>
+      </div>
+   <% end %>
+</div>
+            
 
-    <% @items.each do |item| %>
-
-    <%= link_to item.name, item_path(item) %> - <%= time_ago_in_words(item.created_at) %> - <%= truncate(item.description, length: 15) %>
- - $<%= item.price %> - <%= link_to item.category_name, category_path(item.category) %><br/>
-    <% end %>
