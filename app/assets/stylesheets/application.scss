@@ -16,6 +16,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+    body {
+        background-image: url('');
+        background-position: center center;
+        background-repeat: no-repeat;
+        
+    }
+
     .title-container {
         display: flex;
         justify-content: space-between;
@@ -28,12 +35,23 @@
     }
 
     .items {
-        diplay: flex;
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
     .item {
+        width: 30%;
+        min-width: 300px;
+    }
+
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .category {
         width: 30%;
         min-width: 300px;
     }
