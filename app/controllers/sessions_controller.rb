@@ -19,10 +19,4 @@ class SessionsController < ApplicationController
         session.clear
         redirect_to '/'
     end 
-
-    private
-
-    # def session_params
-    #     params.require(:user).permit(:name, :password)
-    # end 
 end

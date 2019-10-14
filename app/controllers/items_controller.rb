@@ -15,17 +15,15 @@ class ItemsController < ApplicationController
     
     def create 
         @item = current_user.items.build(item_params)
-        #byebug
-        if @item.save!
-            #render :show
-            redirect_to user_item_path(current_user, @item)
+        if @item.save
+            redirect_to user_item_path(current_user, @item), notice: "Item Created!"
         else
+            @errors = @item.errors.full_messages
             redirect_to new_item_path
         end
     end
 
-    def show 
-         #raise params.inspect     
+    def show      
     end
 
     def edit      
@@ -33,15 +31,16 @@ class ItemsController < ApplicationController
 
     def update
         if @item.update(item_params)
-            redirect_to user_item_path(current_user, @item)
+            redirect_to user_item_path(current_user, @item), notice: "Item Updated!"
         else  
+            @errors = @item.errors.full_messages
             render :edit
         end
     end
 
     def destroy 
         @item.destroy 
-        redirect_to user_path(current_user)
+        redirect_to user_path(current_user), notice: "Deleted Item: #{@item.name}"
     end
 
     private 

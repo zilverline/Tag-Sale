@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-    #before_action :authenticate_user, only: [:show]
-
     def index 
         @users = User.all
     end
@@ -14,19 +12,16 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save!
             session[:user_id] = @user.id
-            redirect_to user_path(@user)
+            redirect_to user_path(@user), notice: "User Created!"
         else
+            @errors = @user.errors.full_messages
             render :new
         end
     end
 
     def show 
-        # if logged_in?
-            @user = User.find(params[:id])
-            render :show
-        # else 
-        #     redirect_to '/'
-        # end
+        @user = User.find(params[:id])
+        #render :show
     end
 
     private 
