@@ -1,23 +1,33 @@
 <div class="title-container">
     <h2><%= @item.name %></h2>
 </div>
-
-                    <% if @item.image.attached? %>
-        <li>Picture: <%= image_tag(@item.image, style:'width:20%') %></li>
-                    <% end %>
-        <li>Item Description: <%= @item.description %></li>
-        <li>Price: $<%= @item.price %></li>
-        <li>Category: <%= @item.category_name %></li>
+        <% if @item.image.attached? %>
+        <%= image_tag(@item.image, style:'width:30%') %>
+        <% end %>
+    <div class="item">
+        <div class="thumbnail">
+            <div class="caption">
+                <p>Item Description: <%= @item.description %></p>
+                <p>Price: $<%= @item.price %></p>
+                <p>Category: <%= @item.category_name %></p>
+            </div>
+        </div>
+    </div>
         
-
-    <% if current_user == @item.user %>
-        <%= link_to "Edit Item", edit_user_item_path(current_user, @item), class: "btn btn-primary" %><br/>
-        <%= link_to "Delete Item", @item, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' }, class: "btn btn-primary" %><br/>
-        <%= link_to "Back to My Items", user_path(current_user), class: "btn btn-primary" %>
-    <% else %>
-        <li>Seller :<%= link_to @item.user.name, user_path(@item.user) %></li>
-        <li>Contact Seller: <%= link_to @item.user.email %></li>
-    <% end %>
+    <div class="item">
+        <div class="thumbnail">
+            <div class="caption">
+                <% if current_user == @item.user %>
+                    <%= link_to "Edit Item", edit_user_item_path(current_user, @item), class: "btn btn-primary" %><br/>
+                    <%= link_to "Delete Item", @item, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' }, class: "btn btn-primary" %><br/>
+                    <%= link_to "Back to My Items", user_path(current_user), class: "btn btn-primary" %>
+                <% else %>
+                    <p>Seller :<%= link_to @item.user.name, user_path(@item.user) %></p>
+                    <p>Contact Seller: <%= link_to @item.user.email %></p>
+                <% end %>
+            </div>
+        </div>
+    </div>
 
 
 
