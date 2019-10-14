@@ -1,23 +1,39 @@
 <% if current_user == @user %>
-<div class="title-container">
-    <h1>Welcome <%= @user.name %></h1>
-</div>
-    <h3>Your Current Items Listed for Sale</h3>
-        <ul>
-            <% @user.items.each do |item| %>
-        <li><%= link_to item.name, user_item_path(@user, item) %> - $<%= item.price%></li>
-            <% end %>
-        </ul>
+    <div class="title-container">
+        <h1>Welcome <%= @user.name %></h1>
         <%= link_to "Create a Listing", new_user_item_path(@user), class: "btn btn-primary" %>
+    </div>
+        <div class="title-container">
+            <h3>Your Current Items Listed for Sale</h3>
+        </div>
+        <div class="items">
+            <% @user.items.each do |item| %>
+                <div class="item">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <p><%= link_to item.name, user_item_path(@user, item) %> - $<%= item.price%></p>
+                        </div>
+                    </div>
+                </div>    
+            <% end %>
+        </div>    
 <% else %>
-<div class="title-container">
-    <h1><%= @user.name %>'s Items </h1>
-</div>
-    <h3>Current Items Listed for Sale</h3>
-    <ul>
-        <% @user.items.each do |item| %>
-    <li><%= link_to item.name, user_item_path(@user, item) %> - $<%= item.price%></li>
-        <% end %>
-    </ul>
+    <div class="title-container">
+        <h1><%= @user.name %>'s Items </h1>
+    </div>
+        <div class="title-container">
+            <h3>Current Items Listed for Sale</h3>
+        </div>  
+            <div class="items">
+                <% @user.items.each do |item| %>
+                    <div class="item">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <p><%= link_to item.name, user_item_path(@user, item) %> - $<%= item.price%></p>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
 <% end %>
 
