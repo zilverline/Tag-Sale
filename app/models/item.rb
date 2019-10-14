@@ -5,7 +5,7 @@ class Item < ApplicationRecord
     belongs_to :user 
     belongs_to :category 
 
-    validates :name, :price, :description, presence: true
+    validates :name, :price, :description, :category_name, presence: true
     #validates :category_name, uniqueness: true 
     
     def category_name=(name)

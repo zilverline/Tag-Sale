@@ -15,11 +15,16 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-    body {
-        background-image: url('');
-        background-position: center center;
-        background-repeat: no-repeat;
+    
+    html,
+    body {  
+        height: 100%; 
+        background: url("tree-hanging-sale-tags v4.jpg") no-repeat center center fixed;    
+        -webkit-background-size: cover; 
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow-y: scroll;
         
     }
 
@@ -31,6 +36,7 @@
 
         h1 {
             margin: 0px;
+            
         }
     }
 
@@ -43,6 +49,11 @@
     .item {
         width: 30%;
         min-width: 300px;
+    }
+
+    .thumbnail {
+        box-shadow: 3px 3px #919194;
+        border-radius: 10px;
     }
 
     .categories {
