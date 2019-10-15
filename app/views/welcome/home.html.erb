@@ -20,107 +20,78 @@
 
 <body>
 
-  <!-- Navigation 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  -->
-
   <!-- Page Content -->
   <div class="container">
 
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
       <h1 class="display-3">Welcome To Tag Sale!</h1>
-      <p class="lead">If you are looking for a great deal on items, this is the place to find them. 
+        <p class="lead">If you are looking for a great deal on items, this is the place to find them. 
                     If you are hoping to sell some items, we are here for you. A brief overview...A Tag Sale is an upgrade 
                     from a traditional yard/garage sale or unmediated online sale of new or used items. Whether you are 
                     moving, downsizing, liquidating an estate, or simply removing some of your clutter and want to sell 
                     some possessions. Unlike a garage sale, Tag Sales are usually managed by professionals.<p> 
                     <p><strong>We Are Those Professionals!</strong></p>
-      <%= link_to "Go Shopping Now", items_path, class: "btn btn-primary btn-lg" %>
-      <%= link_to "Start Selling Now", signup_path, class: "btn btn-primary btn-lg" %>
-      <%= link_to "Login via Facebook", auth_facebook_callback_path, class: "btn btn-primary btn-lg" %>
-      <!--<a href="#" class="btn btn-primary btn-lg">Go Shopping Now!</a>-->
+                    <%= link_to "Go Shopping Now", items_path, class: "btn btn-primary btn-lg" %>
+                    <%= link_to "Start Selling Now", signup_path, class: "btn btn-primary btn-lg" %>
+                    <%= link_to "Login via Facebook", auth_facebook_callback_path, class: "btn btn-primary btn-lg" %>
     </header>
 
     <!-- Page Features -->
     <div class="row text-center">
-
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
           <img class="card-img-top" src="https://images.pexels.com/photos/1585325/pexels-photo-1585325.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Painting" style="width:265px;height:180px;">
-          <div class="card-body">
-            <h4 class="card-title">Collectible Art and Supplies</h4>
-            <p class="card-text">Whether you are an aspiring Artist, or just looking for crafting supplies, we have you covered. Are you looking for the perfect Painting for over the fireplace? We have an extensive inventory that should suit anyones liking.</p>
-          </div>
-          <div class="card-footer">
+            <div class="card-body">
+              <h4 class="card-title">Collectible Art and Supplies</h4>
+              <p class="card-text">Whether you are an aspiring Artist, or just looking for crafting supplies, we have you covered. Are you looking for the perfect Painting for over the fireplace? We have an extensive inventory that should suit anyones liking.</p>
+            </div>
+            <div class="card-footer">
             <%= link_to "Shop Categories", categories_path, class: "btn btn-primary btn-lg" %>
-          </div>
+            
         </div>
       </div>
+    </div>
 
-      <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4">
+
         <div class="card h-100">
           <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/2329/4971/products/5a28ade3f3c1177314901fdd-big_720x.jpg?v=1520105021" alt="Image of Phone and accessories" style="width:265px;height:180px;">
-          <div class="card-body">
-            <h4 class="card-title">Phones and Accessories</h4>
-            <p class="card-text">View 1000's of New and Refurbished electronics. New and Used Computers, Laptops, Phones and accessories priced right to sell fast. Some of this stuff is priced too cheap NOT to take a look!</p>
-          </div>
-          <div class="card-footer">
-            <%= link_to "Browse all listed Items", items_path, class: "btn btn-primary btn-lg" %>
+            <div class="card-body">
+              <h4 class="card-title">Phones and Accessories</h4>
+              <p class="card-text">View 1000's of New and Refurbished electronics. New and Used Computers, Laptops, Phones and accessories priced right to sell fast. Some of this stuff is priced too cheap NOT to take a look!</p>
+            </div>
+            <div class="card-footer">
+              <%= link_to "Browse all listed Items", items_path, class: "btn btn-primary btn-lg" %>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="https://www.rentacenter.com/medias/100025160-01-500.jpg?context=bWFzdGVyfGltYWdlc3wxNTA1NXxpbWFnZS9qcGVnfHN5cy1tYXN0ZXIvaW1hZ2VzL2g2ZC9oMzMvOTMxNjgzNDQ3NjA2Mi8xMDAwMjUxNjBfMDFfNTAwLmpwZ3xlOTEyMDE3Y2I0YWQ4ZTBkNzA4NmEyYzcxYzJiNDRmYWE4NGI3NTI5YmUzYTA4ZWExZDY4NjYyZmQ4NDM2MTcy" alt="Playstation" style="width:265px;height:180px;">
-          <div class="card-body">
-            <h4 class="card-title">New and Used Gaming Systems</h4>
-            <p class="card-text">We have a large selection of new and used Gaming Consoles listed for sale right now. Our sellers are motivated and are ready to deal. Signup and start shopping!</p>
-          </div>
-          <div class="card-footer">
-            <%= link_to "Shop Categories", categories_path, class: "btn btn-primary btn-lg" %>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="https://www.rentacenter.com/medias/100025160-01-500.jpg?context=bWFzdGVyfGltYWdlc3wxNTA1NXxpbWFnZS9qcGVnfHN5cy1tYXN0ZXIvaW1hZ2VzL2g2ZC9oMzMvOTMxNjgzNDQ3NjA2Mi8xMDAwMjUxNjBfMDFfNTAwLmpwZ3xlOTEyMDE3Y2I0YWQ4ZTBkNzA4NmEyYzcxYzJiNDRmYWE4NGI3NTI5YmUzYTA4ZWExZDY4NjYyZmQ4NDM2MTcy" alt="Playstation" style="width:265px;height:180px;">
+              <div class="card-body">
+                <h4 class="card-title">New and Used Gaming Systems</h4>
+                <p class="card-text">We have a large selection of new and used Gaming Consoles listed for sale right now. Our sellers are motivated and are ready to deal. Signup and start shopping!</p>
+              </div>
+              <div class="card-footer">
+                <%= link_to "Shop Categories", categories_path, class: "btn btn-primary btn-lg" %>
+              </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://hellodog.co/wp-content/uploads/2019/05/hd-desk-modern-office-wallpaper-with-modern-office-wallpaper-wallpapers-office-office-r-modern-hd-desktop-backgrounds-summer-hd-desktop-backgrounds-quotes.jpg" alt="Modern Office" style="width:265px;height:180px;">
-          <div class="card-body">
-            <h4 class="card-title">Office Furniture and Supplies</h4>
-            <p class="card-text">If you have an old Couch or Loveseat or a brand new Office Chair "laying around", Signup now and put it in front of thousands of buyers daily. Get Tagging!!</p>
-          </div>
-          <div class="card-footer">
-            <%= link_to "Browse all listed Items", items_path, class: "btn btn-primary btn-lg" %>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="http://hellodog.co/wp-content/uploads/2019/05/hd-desk-modern-office-wallpaper-with-modern-office-wallpaper-wallpapers-office-office-r-modern-hd-desktop-backgrounds-summer-hd-desktop-backgrounds-quotes.jpg" alt="Modern Office" style="width:265px;height:180px;">
+            <div class="card-body">
+              <h4 class="card-title">Office Furniture and Supplies</h4>
+              <p class="card-text">If you have an old Couch or Loveseat or a brand new Office Chair "laying around", Signup now and put it in front of thousands of buyers daily. Get Tagging!!</p>
+            </div>
+            <div class="card-footer">
+              <%= link_to "Browse all listed Items", items_path, class: "btn btn-primary btn-lg" %>
+            </div>
           </div>
         </div>
-      </div>
 
     </div>
     <!-- /.row -->
