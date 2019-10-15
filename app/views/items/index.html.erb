@@ -2,9 +2,9 @@
    <div class="thumbnail">
       <h1>Shop All Items</h1>
    </div>
-      <h4><%= sortable "name", "Name" %></h4>
-      <h4><%= sortable "price", "Price" %></h4>
-      <h4><%= sortable "created_at", "Listed" %></h4>
+      <h4><%= sortable "name", "Sort by Name" %></h4>
+      <h4><%= sortable "price", "Sort by Price" %></h4>
+      <h4><%= sortable "created_at", "Sort by Newest" %></h4>
 </div>
    <div class="items">
       <% @items.each do |item| %>
