@@ -6,7 +6,8 @@ class Item < ApplicationRecord
     belongs_to :category 
 
     validates :name, :price, :description, :category_name, presence: true
-    #validates :category_name, uniqueness: true 
+    validates :name, length: { minimum: 2 }
+    validates :description, length: { maximum: 300 }
     
     def category_name=(name)
         self.category = Category.find_or_create_by(name: name)
