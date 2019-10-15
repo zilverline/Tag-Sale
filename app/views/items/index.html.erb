@@ -2,9 +2,11 @@
    <div class="thumbnail">
       <h1>Shop All Items</h1>
    </div>
-      <h4><%= sortable "name", "Sort by Name" %></h4>
-      <h4><%= sortable "price", "Sort by Price" %></h4>
-      <h4><%= sortable "created_at", "Sort by Newest" %></h4>
+      <div class="thumbnail">
+         <h4><%= sortable "name", "Sort by Name" %></h4>
+         <h4><%= sortable "price", "Sort by Price" %></h4>
+         <h4><%= sortable "created_at", "Sort by Newest" %></h4>
+      </div>
 </div>
    <div class="items">
       <% @items.each do |item| %>
@@ -12,7 +14,7 @@
          <div class="thumbnail">
             <div class="caption">
                <p>
-                  <%= link_to item.name, item_path(item) %> - <%= time_ago_in_words(item.created_at) %> ago - <%= truncate(item.description, length: 15) %>
+                  <%= link_to item.name, item_path(item) %> - <%= time_ago_in_words(item.created_at) %> ago - <%= truncate(item.description, length: 25) %>
                   - $<%= item.price %> - <%= link_to item.category_name, category_path(item.category) %>
                </p>
             </div>

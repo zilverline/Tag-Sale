@@ -1,6 +1,6 @@
 <% if current_user == @user %>
     <div class="title-container">
-        <h1>Welcome <%= @user.name %></h1>
+        <h1>Welcome to your Dashboard <%= @user.name %></h1>
         <%= link_to "Create a Listing", new_user_item_path(@user), class: "btn btn-primary" %>
     </div>
         <div class="title-container">
@@ -22,21 +22,18 @@
         </div>    
 <% else %>
     <div class="title-container">
-        <h1><%= @user.name %>'s Items </h1>
-    </div>
-        <div class="title-container">
-            <h3>Current Items Listed for Sale</h3>
-        </div>  
-            <div class="items">
-                <% @user.items.each do |item| %>
-                    <div class="item">
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <p><%= link_to item.name, user_item_path(@user, item) %> - $<%= item.price%></p>
-                            </div>
+        <h1><%= @user.name %>'s Items Listed for Sale</h1>
+    </div>       
+        <div class="items">
+            <% @user.items.each do |item| %>
+                <div class="item">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <p><%= link_to item.name, user_item_path(@user, item) %> - <%= item.category.name %> - $<%= item.price%></p>
                         </div>
                     </div>
-                <% end %>
-            </div>
+                </div>
+            <% end %>
+        </div>
 <% end %>
 
