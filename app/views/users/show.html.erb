@@ -4,7 +4,7 @@
         <%= link_to "Create a Listing", new_user_item_path(@user), class: "btn btn-primary" %>
     </div>
         <div class="title-container">
-            <h3>Your Items Currently Listed for Sale</h3>
+            <h3>Items Currently Listed for Sale</h3>
         </div>
         <div class="items">
             <% @user.items.each do |item| %>
