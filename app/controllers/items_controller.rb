@@ -1,12 +1,14 @@
 class ItemsController < ApplicationController
     
+    helper_method :sort_column, :sort_direction
+
     before_action :authenticate_user, except: [:index, :show]
     before_action :logged_in?, except: [:index, :show]
     before_action :current_user, except: [:index, :show]
     before_action :find_item, only: [:show, :edit, :update, :destroy]
 
     def index 
-        @items = Item.all
+        @items = Item.order(sort_column + " " + sort_direction)
     end
 
     def new 
@@ -51,6 +53,14 @@ class ItemsController < ApplicationController
 
     def find_item
         @item = Item.find(params[:id])
+    end
+
+    def sort_column
+        Item.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+
+    def sort_direction
+        %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 
 end

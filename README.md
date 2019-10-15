@@ -50,13 +50,14 @@ ruby '2.6.1'
 * Run rails s from the command line
 * Goto localhost:3000 in your browser
 * Signup for app by creating a Username, Password and entering valid email address.
-* Start entering items you would like to sell, edit them if you wish, or browse to see if there   is anything listed that'll peak your interest. 
+* Start entering items you would like to sell, edit them if you wish, or browse to see if there   is anything listed that'll pique your interest. 
 
 ### Sources and Resources Used
 * http://learn.co
 * https://rubygems.org
 * https://stackoverflow.com x 1000 ;)
 * https://www.favicon-generator.org
+* https://youtu.be/cWYiAVMSHD4  (sorting table)
 
 ### License
 
