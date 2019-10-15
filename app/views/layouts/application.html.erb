@@ -17,12 +17,13 @@
         <div class="container-fluid">
           <div class="navbar header">
             <div class="nav navbar-nav navbar right">
+              <%= link_to "Home", root_path, class: "btn btn-primary" %>
               <%= link_to 'Browse by Categories', categories_path, class: "btn btn-primary" %>
               <%= link_to 'All Items for Sale', items_path, class: "btn btn-primary" %>
               <% if !logged_in? %>
                 <%= link_to 'Sign Up', signup_path, class: "btn btn-primary" %>
                 <%= link_to 'Sign in', login_path, class: "btn btn-primary" %>
-                <%= link_to "Login via Facebook", "/auth/facebook", class: "btn btn-primary" %>
+                <%= link_to "Sign Up via Facebook", "/auth/facebook", class: "btn btn-primary" %>
               <% else %>
                 <%= link_to "My DashBoard", user_path(current_user), class: "btn btn-primary" %>
                 <%= link_to "Log Out", logout_path, method: :delete, class: "btn btn-primary" %>

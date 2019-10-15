@@ -3,11 +3,11 @@ module ApplicationHelper
     def alert_class(flash_type)       
         case flash_type.to_s
         when :notice
-            "alert success"
+            " success"
         when :alert
-            "alert-warning"
+            "warning"
         when :error
-            "alert-danger"
+            "danger"
         end       
     end
 

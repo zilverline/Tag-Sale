@@ -63,3 +63,4 @@ ruby '2.6.1'
 
 ### Possible Future Changes or upgrades
 * email "masking" for anonymity
+* "tag sale inc." lists your items for sale across all online marketplaces(facebook marketplace,  craigslist, ebay, amazon(if new), etc.) and platforms. We are the professionals!!
