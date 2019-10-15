@@ -11,7 +11,10 @@
                 <div class="item">
                     <div class="thumbnail">
                         <div class="caption">
-                            <p><%= link_to item.name, user_item_path(@user, item) %> - $<%= item.price%></p>
+                            <% if item.image.attached? %>
+                                <%= image_tag(item.image, style:'width:30%') %>
+                                <% end %>
+                            <p><%= link_to item.name, user_item_path(@user, item) %> - <%= item.category.name %> - <%= item.description %> - $<%= item.price%></p>
                         </div>
                     </div>
                 </div>    

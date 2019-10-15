@@ -1,9 +1,13 @@
- 
-        <h1>Category: <%= @category.name %></h1>
-    <ul>
-        <% @category.items.each do |item|%>
+ <div class="title-container">
+    <h1>Category: <%= @category.name %></h1>
+</div>
 
-        <li><%= link_to item.name, item_path(item) %> - <%= link_to item.user.name, user_path(item.user) %> ...<%= truncate(item.description, length: 15) %> - <%= time_ago_in_words(item.created_at) %> ago </li>
-
-        <% end %>
-    </ul>
+    <div class="item">
+        <div class="thumbnail">
+            <div class="caption">
+                <% @category.items.each do |item| %>
+                    <p><%= link_to item.name, item_path(item) %> - Seller: <%= link_to item.user.name, user_path(item.user) %> - <%= truncate(item.description, length: 30) %> - Item Listed: <%= time_ago_in_words(item.created_at) %> ago</p>
+                <% end %>
+            </div>
+        </div>
+    </div>
