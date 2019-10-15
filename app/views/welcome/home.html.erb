@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>Heroic Features - Start Bootstrap Template</title>
+    <title>Tag Sale Home</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="css/heroic-features.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
 
-</head>
+  </head>
 
 <body>
 
@@ -55,12 +55,13 @@
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
       <h1 class="display-3">A Warm Welcome!</h1>
-      <p class="lead">A tag sale is an upgrade from a traditional yard sale or unmediated online sale of used items. 
-                    Whether someone is moving, downsizing, liquidating an estate, or simply removing some of their 
-                    clutter they need to sell some possessions. Unlike a garage sale, tag sales are usually managed 
-                    by professionals. <strong>We are those Professionals!</strong></p>
+      <p class="lead">A tag sale is an upgrade from a traditional yard/garage sale or unmediated online sale of used 
+                    or new items. Whether you are moving, downsizing, liquidating an estate, or simply removing some 
+                    of their clutter they need to sell some possessions. Unlike a garage sale, tag sales are usually 
+                    managed by professionals. <strong>We are those Professionals!</strong></p>
       <%= link_to "Go Shopping Now", items_path, class: "btn btn-primary btn-lg" %>
       <%= link_to "Start Selling Now", signup_path, class: "btn btn-primary btn-lg" %>
+      <%= link_to "Login via Facebook", auth_facebook_callback_path, class: "btn btn-primary btn-lg" %>
       <!--<a href="#" class="btn btn-primary btn-lg">Go Shopping Now!</a>-->
     </header>
 
@@ -125,18 +126,17 @@
   </div>
   <!-- /.container -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Tag Sale 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+      <!-- Footer -->
+      <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; Tag Sale 2019</p>
+        </div>
+        <!-- /.container -->
+      </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-</body>
-
+  </body>
 </html>
