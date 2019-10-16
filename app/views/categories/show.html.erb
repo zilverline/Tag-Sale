@@ -6,7 +6,12 @@
         <div class="thumbnail">
             <div class="caption">
                 <% @category.items.each do |item| %>
-                    <p><%= link_to item.name, item_path(item) %> - Seller: <%= link_to item.user.name, user_path(item.user) %> - <%= truncate(item.description, length: 30) %> - Item Listed: <%= time_ago_in_words(item.created_at) %> ago</p>
+                <% if item.image.attached? %>
+                <%= image_tag(item.image, style:'width:30%') %>
+                <% end %>
+                <p>
+                <%= link_to item.name, item_path(item) %> - Seller: <%= link_to item.user.name, user_path(item.user) %> - <%= truncate(item.description, length: 30) %> - Item Listed: <%= time_ago_in_words(item.created_at) %> ago
+                </p>
                 <% end %>
             </div>
         </div>
