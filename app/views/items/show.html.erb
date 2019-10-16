@@ -17,7 +17,7 @@
                     <%= link_to "Back to My Items", user_path(current_user), class: "btn btn-primary" %>
                 <% else %>
                     <p>Seller :<%= link_to @item.user.name, user_path(@item.user) %></p>
-                    <p>Contact Seller: <%= link_to @item.user.email %></p>
+                    <p>Contact Seller: <%= mail_to @item.user.email %></p>
                 <% end %>
             </div>
         </div>
