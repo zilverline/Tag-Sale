@@ -17,7 +17,7 @@
                     <%= link_to "Back to My Items", user_path(current_user), class: "btn btn-primary" %>
                 <% else %>
                     <p>Seller :<%= link_to @item.user.name, user_path(@item.user) %></p>
-                    <p>Contact Seller: <%= mail_to @item.user.email %></p>
+                    <p>Contact Seller: <%=  mail_to(@item.user.email, "Make an Offer", class: 'btn btn-primary btn-success', subject: @item.name, body: "****Alert From Tag Sale****\n\n\nYou have a question from a Tag Sale user in reference to your item: #{@item.name}.\n\n\n\n I have some questions about #{@item.name}.") %></p>
                 <% end %>
             </div>
         </div>

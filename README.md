@@ -57,10 +57,11 @@ ruby '2.6.1'
 * https://rubygems.org
 * https://stackoverflow.com x 1000 ;)
 * https://www.favicon-generator.org
-* https://youtu.be/cWYiAVMSHD4  (sorting table)
+* https://youtu.be/cWYiAVMSHD4  (sorting)
+* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 ### License
 
 ### Possible Future Changes or upgrades
 * email "masking" for anonymity
-* "tag sale inc." lists your items for sale across all online marketplaces(facebook marketplace,  craigslist, ebay, amazon(if new), etc.) and platforms. We are the professionals!!
+* "tag sale inc." lists your items for sale across all online marketplaces and platforms.         (facebook marketplace,  craigslist, ebay, amazon(if new), etc.) We are the professionals!!

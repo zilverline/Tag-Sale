@@ -52,22 +52,23 @@
         min-width: 300px;
     }
 
-    .thumbnail {
-        box-shadow: 3px 3px 4px #68686e;
-        border-radius: 10px;
-    }
-
+    
     .categories {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
-
+    
     .category {
         width: 30%;
         min-width: 300px;
     }
-
+    
+    .thumbnail {
+        box-shadow: 3px 3px 4px #68686e;
+        border-radius: 10px;
+    }
+    
     .form-group {
         width: 45%;
 
