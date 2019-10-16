@@ -32,9 +32,13 @@
                         your clutter and want to sell some possessions. Unlike a garage sale, Tag Sales are usually managed by 
                         professionals.<p> 
                         <p><strong>We Are Those Professionals!</strong></p>
-                        <%= link_to "Go Shopping Now", items_path, class: "btn btn-primary btn-lg" %>
-                        <%= link_to "Start Selling Now", signup_path, class: "btn btn-primary btn-lg" %>
-                        <%= link_to "Login via Facebook", "/auth/facebook", class: "btn btn-primary btn-lg" %>
+                          <%= link_to "Go Shopping Now", items_path, class: "btn btn-primary btn-lg" %>
+                        <% if !logged_in? %>
+                          <%= link_to "Login via Facebook", "/auth/facebook", class: "btn btn-primary btn-lg" %>
+                          <%= link_to "Start Selling Now", signup_path, class: "btn btn-primary btn-lg" %>
+                        <% else %>
+                          <%= link_to "Start Selling Now", user_path(current_user), class: "btn btn-primary btn-lg" %>
+                        <% end %>
     </header>
 
     <!-- Page Features -->

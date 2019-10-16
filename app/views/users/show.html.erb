@@ -1,7 +1,7 @@
 <% if current_user == @user %>
     <div class="title-container">
         <h1>Welcome to your Dashboard <%= @user.name %></h1>
-        <%= link_to "Create a Listing", new_user_item_path(@user), class: "btn btn-primary" %>
+        <%= link_to "Create a Listing", new_user_item_path(@user), class: "btn btn-success btn-lg" %>
     </div>
         <div class="title-container">
             <h3>Items Currently Listed for Sale</h3>
