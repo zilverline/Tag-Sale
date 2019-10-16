@@ -19,7 +19,7 @@
     html,
     body {  
         height: 100%; 
-        background: url("tree-hanging-sale-tags v4.jpg") no-repeat center center fixed;    
+        background: url("IMG_2904.JPG") no-repeat center center fixed;    
         -webkit-background-size: cover; 
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -27,6 +27,10 @@
         overflow-y: scroll;
         color: rgb(30, 60, 124);
         // padding-top: 56px;
+    }
+
+    .jumbotron my-4 {
+        position: relative;
     }
 
     .title-container {
@@ -89,5 +93,9 @@
     }
 
     .card-title {
-        color: rgb(30, 60, 124)
+        color: rgb(246, 248, 250)
+    }
+
+    .card-text {
+        color: rgb(246, 248, 250)
     }
