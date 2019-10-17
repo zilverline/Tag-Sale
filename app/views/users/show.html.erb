@@ -18,7 +18,13 @@
                             <% if item.image.attached? %>
                                 <%= image_tag(item.image, style:'width:30%') %>
                                 <% end %>
-                            <p><%= link_to item.name, user_item_path(@user, item) %> - <%= item.category.name %> - <%= item.description %> - $<%= item.price%></p>
+                            <p><%= link_to item.name, user_item_path(@user, item) %> - <%= item.category.name %> - <%= item.description %> - $<%= item.price%> - 
+                            Condition:
+                            <% if item.new == true %>
+                                New
+                            <% else %>
+                                Used
+                            <% end %></p>
                         </div>
                     </div>
                 </div>    
@@ -38,7 +44,13 @@
                             <% if item.image.attached? %>
                                 <%= image_tag(item.image, style:'width:30%') %>
                                 <% end %>
-                            <p><%= link_to item.name, user_item_path(@user, item) %> - <%= item.category.name %> - $<%= item.price%></p>
+                            <p><%= link_to item.name, user_item_path(@user, item) %> - <%= item.category.name %> - $<%= item.price%>
+                            Condition:
+                            <% if item.new == true %>
+                                New
+                            <% else %>
+                                Used
+                            <% end %></p>
                         </div>
                     </div>
                 </div>
