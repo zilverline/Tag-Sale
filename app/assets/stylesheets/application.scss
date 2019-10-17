@@ -25,12 +25,12 @@
         -o-background-size: cover;
         background-size: cover;
         overflow-y: scroll;
-        color: rgb(30, 60, 124);
-        // padding-top: 56px;
+        color: #082c6f;
     }
 
     .jumbotron my-4 {
         position: relative;
+        background-color: ffffff;
     }
 
     .title-container {
@@ -52,7 +52,7 @@
     }
 
     .item {
-        width: 30%;
+        width: 31%;
         min-width: 300px;
     }
 
@@ -69,8 +69,9 @@
     }
     
     .thumbnail {
-        box-shadow: 3px 3px 4px #68686e;
-        border-radius: 5px;
+        box-shadow: 4px 4px 9px #313135;
+        border-radius: 3px;
+        margin-bottom: 15px;
     }
     
     .form-group {
@@ -81,16 +82,26 @@
         }
         
         .login {
-            width: 40%;
+            width: 30%;
             margin-bottom: 1%;
         }
     }
 
     .btn {
         //padding: 5px;
+        font-size: 20px;
         margin-top: 2%;
         margin-bottom: 1%;
-        color: blue;
+        color: #082c6f;
+    }
+
+    .btn-success {
+        background-color: #45e07b;
+        border-color: #4cae4c;
+    }
+
+    .btn-secondary {
+        font-size: 25px;
     }
 
     .card-title {
@@ -99,4 +110,17 @@
 
     .card-text {
         color: rgb(246, 248, 250)
+    }
+
+    a {
+        color: #0046ca;
+        text-decoration: none;
+    }
+
+    .container {
+        padding-left: 0px;
+    }
+
+    .navbar {
+        width: 100%;
     }

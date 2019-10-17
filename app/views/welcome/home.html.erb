@@ -32,12 +32,12 @@
                         your clutter and want to sell some possessions. Unlike a garage sale, Tag Sales are usually managed by 
                         professionals.<p> 
                         <p><strong>We Are Those Professionals!</strong></p>
-                          <%= link_to "Go Shopping Now", items_path, class: "btn btn-primary btn-lg" %>
+                          <%= link_to "Go Shopping Now", items_path, class: "btn btn-success btn-lg" %>
                         <% if !logged_in? %>
-                          <%= link_to "Login via Facebook", "/auth/facebook", class: "btn btn-primary btn-lg" %>
-                          <%= link_to "Start Selling Now", signup_path, class: "btn btn-primary btn-lg" %>
+                          <%= link_to "Login via Facebook", "/auth/facebook", class: "btn btn-success btn-lg" %>
+                          <%= link_to "Start Selling Now", signup_path, class: "btn btn-success btn-lg" %>
                         <% else %>
-                          <%= link_to "Sell Your Item Now", user_path(current_user), class: "btn btn-primary btn-lg" %>
+                          <%= link_to "Sell Your Item Now", user_path(current_user), class: "btn btn-success btn-lg" %>
                         <% end %>
     </header>
 
@@ -51,7 +51,7 @@
               <p class="card-text">Whether you are an aspiring Artist, or just looking for crafting supplies, we have you covered. Are you looking for the perfect Painting for over the fireplace? We have an extensive inventory that should suit anyones liking.</p>
             </div>
             <div class="card-footer">
-            <%= link_to "Shop Categories", categories_path, class: "btn btn-primary btn-lg" %>
+            <%= link_to "Shop Categories", categories_path, class: "btn btn-success btn-lg" %>
             
         </div>
       </div>
@@ -66,7 +66,7 @@
               <p class="card-text">View 1000's of New and Refurbished electronics. New and Used Computers, Laptops, Phones and accessories priced right to sell fast. Some of this stuff is priced too cheap NOT to take a look!</p>
             </div>
             <div class="card-footer">
-              <%= link_to "Browse all listed Items", items_path, class: "btn btn-primary btn-lg" %>
+              <%= link_to "Browse all listed Items", items_path, class: "btn btn-success btn-lg" %>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
                 <p class="card-text">We have a large selection of new and used Gaming Consoles listed for sale right now. Our sellers are motivated and are ready to deal. Signup and start shopping!</p>
               </div>
               <div class="card-footer">
-                <%= link_to "Shop Categories", categories_path, class: "btn btn-primary btn-lg" %>
+                <%= link_to "Shop Categories", categories_path, class: "btn btn-success btn-lg" %>
               </div>
           </div>
         </div>
@@ -92,7 +92,7 @@
               <p class="card-text">If you have an old Couch or Loveseat or a brand new Office Chair "laying around", Signup now and put it in front of thousands of buyers daily. Get Tagging!!</p>
             </div>
             <div class="card-footer">
-              <%= link_to "Browse all listed Items", items_path, class: "btn btn-primary btn-lg" %>
+              <%= link_to "Browse all listed Items", items_path, class: "btn btn-success btn-lg" %>
             </div>
           </div>
         </div>
