@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
             #byebug
             redirect_to user_path(@user)
         else
+            flash[:danger] = "Improper login information entered."
             render 'new'
         end     
     end

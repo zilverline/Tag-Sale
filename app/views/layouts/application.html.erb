@@ -35,11 +35,7 @@
     </header>
 
     <section class="container">
-      <div id="flash">
-        <% flash.each do |key, value| %>
-          <div class="flash <%= alert_class(key) %>"><%= value %></div>
-        <% end %>
-      </div>      
+         
         <%= yield %>
     </section>
   </body>

@@ -20,7 +20,6 @@ class ItemsController < ApplicationController
         if @item.save
             redirect_to user_item_path(current_user, @item), notice: "Item Created!"
         else
-            @errors = @item.errors.full_messages
             redirect_to new_item_path
         end
     end
@@ -35,7 +34,6 @@ class ItemsController < ApplicationController
         if @item.update(item_params)
             redirect_to user_item_path(current_user, @item), notice: "Item Updated!"
         else  
-            @errors = @item.errors.full_messages
             render :edit
         end
     end
