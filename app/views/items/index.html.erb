@@ -22,7 +22,12 @@
                <% end %>
                <p>
                   <%= link_to item.name, item_path(item) %> - <%= time_ago_in_words(item.created_at) %> ago - <%= truncate(item.description, length: 25) %>
-                  - $<%= item.price %> - <%= link_to item.category_name, category_path(item.category) %>
+                  - $<%= item.price %> - <%= link_to item.category_name, category_path(item.category) %> - <p>Condition:
+                <% if item.new == true %>
+                New
+                <% else %>
+                Used
+                <% end %></p>
                </p>
             </div>
          </div>
