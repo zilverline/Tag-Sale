@@ -22,7 +22,9 @@
         </div>    
 <% else %>
     <div class="title-container">
-        <h1><%= @user.name %>'s Items Listed for Sale</h1>
+        <div class="thumbnail">
+            <h1><%= @user.name %>'s Items Listed for Sale</h1>
+        </div>
     </div>       
         <div class="items">
             <% @user.items.each do |item| %>

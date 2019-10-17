@@ -9,7 +9,7 @@ module ApplicationHelper
     def alert_class(flash_type)       
         case flash_type.to_s
         when :notice
-            " success"
+            "success"
         when :alert
             "warning"
         when :error
