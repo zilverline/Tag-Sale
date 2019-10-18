@@ -6,15 +6,4 @@ module ApplicationHelper
         link_to title, :sort => column, :direction => direction
     end
 
-    # def alert_class(flash_type)       
-    #     case flash_type.to_s
-    #     when :notice
-    #         "success"
-    #     when :alert
-    #         "warning"
-    #     when :error
-    #         "danger"
-    #     end       
-    # end
-
 end
