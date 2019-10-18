@@ -17,6 +17,8 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-paypal', '~> 1.3'
+gem 'omniauth-google-oauth2', '~> 0.8.0'
 gem 'dotenv-rails'
 
 # gem 'image_processing', '~> 1.2'
