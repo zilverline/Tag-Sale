@@ -12,27 +12,27 @@
   </head>
 
   <body>
-    <header class="container">
-      <nav class="navbar navbar-default">
+    <%# <header class="container"> %>
+      <%# <nav class="navbar navbar-default"> %>
         
-          <div class="navbar header">
-            <div class="nav navbar-nav navbar right">
-              <%= link_to "Tag Sale", root_path, class: "btn btn-secondary btn-lg" %>
-              <%= link_to 'Browse by Categories', categories_path, class: "btn btn-outline-primary" %>
-              <%= link_to 'All Items for Sale', items_path, class: "btn btn-outline-primary" %>
+          <div class="topnav">
+            <%# <div class="navflex"> %>
+              <%= link_to "Tag Sale", root_path, class: "nav-link" %>
+              <%= link_to 'Browse by Categories', categories_path, class: "nav-link" %>
+              <%= link_to 'All Items for Sale', items_path, class: "nav-link" %>
               <% if !logged_in? %>
-                <%= link_to 'Sign Up', signup_path, class: "btn btn-outline-primary" %>
-                <%= link_to 'Sign in', login_path, class: "btn btn-outline-primary" %>
-                <%= link_to "Login via Facebook", "/auth/facebook", class: "btn btn-outline-primary" %>
+                <%= link_to 'Sign Up', signup_path, class: "nav-link" %>
+                <%= link_to 'Sign in', login_path, class: "nav-link" %>
+                <%= link_to "Login via Facebook", "/auth/facebook", class: "nav-link" %>
               <% else %>
-                <%= link_to "My DashBoard", user_path(current_user), class: "btn btn-outline-primary" %>
-                <%= link_to "Log Out", logout_path, method: :delete, class: "btn btn-outline-primary" %>
+                <%= link_to "My DashBoard", user_path(current_user), class: "nav-link" %>
+                <%= link_to "Log Out", logout_path, method: :delete, class: "nav-link" %>
               <% end %>
-            </div>
+            <%# </div> %>
           </div>
         
-      </nav>
-    </header>
+      <%# </nav> %>
+    <%# </header> %>
 
     <section class="container">
          
