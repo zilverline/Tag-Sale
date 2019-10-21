@@ -6,4 +6,12 @@ module ApplicationHelper
         link_to title, :sort => column, :direction => direction
     end
 
+    def item_condition(item)
+        if item.new 
+            "New"
+        else 
+            "Used"
+        end 
+    end
+
 end

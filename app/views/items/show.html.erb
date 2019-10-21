@@ -11,14 +11,8 @@
             <div class="caption">
                 <p>Item Description: <%= @item.description %></p>
                 <p>Price: $<%= @item.price %></p>
-                <p>Category: <%= @item.category_name %></p>
-                
-                <p>Condition:
-                <% if @item.new == true %>
-                New
-                <% else %>
-                Used
-                <% end %></p>
+                <p>Category: <%= @item.category_name %></p>               
+                <p>Condition: <%= item_condition(@item) %></p>
             
                 <% if current_user == @item.user %>
                     <%= link_to "Edit Item", edit_user_item_path(current_user, @item), class: "btn btn-success" %><br/>
