@@ -3,14 +3,14 @@
         <div class="thumbnail">
             <%= render 'sessions/flash_message' %>
                 <h1>Welcome to your Dashboard <%= @user.name %></h1>
-                <h3>Items Currently Listed for Sale</h3>
+                <h3>Items Currently Listed for <%= logo %></h3>
         </div>
             <%= link_to "Create a Listing", new_user_item_path(@user), class: "btn btn-success btn-lg" %>
     </div>
 <% else %>
     <div class="title-container">
         <div class="thumbnail">
-            <h1><%= @user.name %>'s Items Listed for Sale</h1>
+            <h1><%= @user.name %>'s Items Listed for<%= logo %></h1>
         </div>
     </div> 
 <% end %>

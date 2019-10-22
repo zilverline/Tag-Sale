@@ -7,7 +7,7 @@
       <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
       <meta name="viewport" content="width=device-width, initial-scale=1" >
-      <%= favicon_link_tag asset_path('Tag-Sale Favicon.png'), :rel => 'icon', :type => "image/png" %>
+      <%= favicon_link_tag asset_path('tagsalelogo1.png'), :rel => 'icon', :type => "image/png" %>
   </head>
 
   <body>
@@ -15,10 +15,10 @@
           <div class="topnav">
             
               <div class="nav-link" >
-                <a href="/"><%= image_tag "TAG-SALE-POSSIBLE LOGO.jpeg", height:"40" %></a>
+                <a href="/"><%= logo %></a>
               </div>
-              <%= link_to 'Browse by Categories', categories_path, class: "nav-link" %>
-              <%= link_to 'All Items for Sale', items_path, class: "nav-link" %>
+                <%= link_to 'Browse by Categories', categories_path, class: "nav-link" %>
+                <%= link_to 'All Items for Sale', items_path, class: "nav-link" %>
               <% if !logged_in? %>
                 <%= link_to 'Sign Up', signup_path, class: "nav-link" %>
                 <%= link_to 'Sign in', login_path, class: "nav-link" %>
@@ -27,7 +27,14 @@
                 <%= link_to "My DashBoard", user_path(current_user), class: "nav-link" %>
                 <%= link_to "Log Out", logout_path, method: :delete, class: "nav-link" %>
               <% end %>
-            
+                <%= form_tag(search_page_path, :method => "get", class: 'navbar-form navbar-left') do %>  
+                  <div class="input-group">  
+                    <%= search_field_tag :search, params[:search], placeholder: "Search Items for Sale", class: "form-control" %>  
+                      <div class="input-group-btn">  
+                        <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil %>  
+                      </div>  
+                  </div>  
+                <% end %>
           </div>
         
       

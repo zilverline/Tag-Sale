@@ -1,0 +1,20 @@
+<div class="title-container">
+    <div class="thumbnail">
+        <h1>Search Result</h1> 
+    </div>
+</div> 
+    <div class="items">
+        <% @items.each do |item| %> 
+            <div class="item">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <%= image_present?(item)%>
+                        <p>
+                            <%= link_to item.name, item_path(item) %> - <%= item.category.name %> - <%= item.description %> - $<%= item.price%> - 
+                                Condition: <%= item_condition(item) %>
+                        </p>
+                    </div>
+                </div>
+            </div> 
+        <% end %>
+    </div>

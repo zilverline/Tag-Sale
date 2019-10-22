@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   root 'welcome#home'
 
+  get '/search', to: 'pages#search', :as => 'search_page'
+  
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
 

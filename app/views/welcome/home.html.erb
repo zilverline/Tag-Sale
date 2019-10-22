@@ -26,12 +26,8 @@
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
       <h1 class="display-3">Welcome To Tag Sale!</h1>
-        <p class="lead">If you are looking for a great deal on items, or you are hoping to sell an item, you're in the right 
-                        place. A Tag Sale is an upgrade from a traditional yard/garage sale or unmediated online sale of new 
-                        or used items. Whether you are moving, downsizing, liquidating an estate, or simply removing some of 
-                        your clutter and want to sell some possessions. Unlike a garage sale, Tag Sales are usually managed by 
-                        professionals.<p> 
-                        <p><strong>We Are Those Professionals!</strong></p>
+        <p class="lead">Looking for a great deal on items, or you are hoping to sell an item?...<strong>Tag<%= logo %> it!!</strong><p> 
+                        <p><strong>This is where you shop and save!</strong></p>
                           <%= link_to "Go Shopping Now", items_path, class: "btn btn-success btn-lg" %>
                         <% if !logged_in? %>
                           <%= link_to "Login via Facebook", "/auth/facebook", class: "btn btn-success btn-lg" %>

@@ -20,4 +20,8 @@ module ApplicationHelper
         end
     end
 
+    def logo
+        return image_tag("tagsalelogo1.png", height:"50")
+    end
+
 end
