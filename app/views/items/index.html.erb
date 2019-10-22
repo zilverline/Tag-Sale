@@ -18,9 +18,7 @@
          <div class="item">
             <div class="thumbnail">
                <div class="caption">
-                  <% if item.image.attached? %>
-                  <%= image_tag(item.image, style:'width:30%') %>
-                  <% end %>
+                  <%= image_present?(item) %>
                   <p>
                      <%= link_to item.name, item_path(item) %> - <%= time_ago_in_words(item.created_at) %> ago - <%= truncate(item.description, length: 25) %>
                      - $<%= item.price %> - <%= link_to item.category_name, category_path(item.category) %> 

@@ -40,7 +40,7 @@
     html,
     body {  
         height: 100%; 
-        background: url("IMG_2904.JPG") no-repeat center center fixed;    
+        background: url("background.jpeg") no-repeat center center fixed;    
         -webkit-background-size: cover; 
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -95,24 +95,31 @@
     }
     
     .thumbnail {
-        box-shadow: 4px 4px 9px #313135;
-        border-radius: 3px;
+        box-shadow: 2px 2px 6px #313135;
+        border-radius: 1px;
         margin-bottom: 15px;
     }
     
-    .form-group {
-        width: 45%;
-
-        .signup {
-            width: 50%;
-            
-        }
-        
-        .login {
-            width: 30%;
-            margin-bottom: 1%;
-        }
+    .caption-item {
+        width: 223%;
+        margin-left: 12px;
     }
+
+    .form-group {
+        width: 40%;
+    }
+
+    .signup {
+        width: 70%;
+        margin-left: 60px;            
+    }
+        
+    .login {
+        width: 110%;
+        margin-bottom: 1%;
+        margin-left: 5px;
+    }
+    
 
     .btn {
         //padding: 5px;

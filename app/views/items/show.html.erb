@@ -3,9 +3,7 @@
         <h2><%= @item.name %></h2>
     </div>
 </div>
-        <% if @item.image.attached? %>
-        <%= image_tag(@item.image, style:'width:30%') %>
-        <% end %>
+        <%= image_present?(@item)%>
     <div class="item">
         <div class="thumbnail">
             <div class="caption">

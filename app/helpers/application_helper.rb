@@ -14,4 +14,11 @@ module ApplicationHelper
         end 
     end
 
+    def image_present?(item)
+        if item.image.attached?
+            return image_tag(item.image, style:'width:30%')
+        end
+
+    end
+
 end

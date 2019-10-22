@@ -15,17 +15,11 @@
                 <div class="item">
                     <div class="thumbnail">
                         <div class="caption">
-                            <% if item.image.attached? %>
-                                <%= image_tag(item.image, style:'width:30%') %>
-                            <% end %>
+                            <%= image_present?(item)%>
                                 <p>
                                     <%= link_to item.name, user_item_path(@user, item) %> - <%= item.category.name %> - <%= item.description %> - $<%= item.price%> - 
                                     Condition:
-                                    <% if item.new == true %>
-                                        New
-                                    <% else %>
-                                        Used
-                                    <% end %>
+                                    <%= item_condition(item) %>
                                 </p>
                         </div>
                     </div>
@@ -43,16 +37,11 @@
                 <div class="item">
                     <div class="thumbnail">
                         <div class="caption">
-                            <% if item.image.attached? %>
-                                <%= image_tag(item.image, style:'width:30%') %>
-                                <% end %>
-                            <p><%= link_to item.name, user_item_path(@user, item) %> - <%= item.category.name %> - $<%= item.price%>
-                            Condition:
-                            <% if item.new == true %>
-                                New
-                            <% else %>
-                                Used
-                            <% end %></p>
+                            <%= image_present?(item) %>
+                                <p>
+                                    <%= link_to item.name, user_item_path(@user, item) %> - <%= item.category.name %> - $<%= item.price%>
+                                    Condition: <%= item_condition(item) %>
+                                </p>
                         </div>
                     </div>
                 </div>
