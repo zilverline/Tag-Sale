@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
     
     def new
+        @user = User.new
     end 
 
     def create
@@ -23,19 +24,6 @@ class SessionsController < ApplicationController
             end
         end     
     end
-            
-            
-
-    # def facebookAuth
-    #     @user = User.find_or_create_by(uid: auth['uid']) do |u|
-    #         u.name = auth['info']['name']
-    #         u.email = auth['info']['email']
-    #     end
-       
-    #     session[:user_id] = @user.id
-       
-    #         render 'welcome/home'
-    # end
 
     def destroy
         session.clear

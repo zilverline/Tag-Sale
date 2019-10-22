@@ -2,14 +2,18 @@
     <div class="title-container">
         <div class="thumbnail">
             <h1>Welcome to your Dashboard <%= @user.name %></h1>
+            <h3>Items Currently Listed for Sale</h3>
         </div>
             <%= link_to "Create a Listing", new_user_item_path(@user), class: "btn btn-success btn-lg" %>
     </div>
-        <div class="title-container">
-            <div class="thumbnail">
-                <h3>Items Currently Listed for Sale</h3>
-            </div>
+<% else %>
+    <div class="title-container">
+        <div class="thumbnail">
+            <h1><%= @user.name %>'s Items Listed for Sale</h1>
         </div>
+    </div> 
+<% end %>
+                
         <div class="items">
             <% @user.items.each do |item| %>
                 <div class="item">
@@ -26,26 +30,5 @@
                 </div>    
             <% end %>
         </div>    
-<% else %>
-    <div class="title-container">
-        <div class="thumbnail">
-            <h1><%= @user.name %>'s Items Listed for Sale</h1>
-        </div>
-    </div>       
-        <div class="items">
-            <% @user.items.each do |item| %>
-                <div class="item">
-                    <div class="thumbnail">
-                        <div class="caption">
-                            <%= image_present?(item) %>
-                                <p>
-                                    <%= link_to item.name, user_item_path(@user, item) %> - <%= item.category.name %> - $<%= item.price%>
-                                    Condition: <%= item_condition(item) %>
-                                </p>
-                        </div>
-                    </div>
-                </div>
-            <% end %>
-        </div>
-<% end %>
+
 

@@ -41,3 +41,16 @@ end
 def self.search(search)  
    where("lower(categories.name) LIKE :search OR lower(items.name) LIKE :search", search: "%#{search.downcase}%").uniq   
 end
+
+#errors for login
+<!--
+<% if @user.errors.any? %>
+<div id="error_explanation">
+<h2>There were some errors:</h2>
+<ul>
+    <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+</ul>
+</div>
+<% end %>-->

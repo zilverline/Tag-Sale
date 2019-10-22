@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
     validates :name, :email, presence: true 
     validates :name, :email, uniqueness: true
-    #validates :name, length: { minimum: 2 }
+    validates :name, length: { minimum: 2 }
     validates :password, length: { in: 4..40 }
     
     has_many :items 

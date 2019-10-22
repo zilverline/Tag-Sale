@@ -14,4 +14,11 @@
         <%= submit_tag "Login", class: "btn btn-success btn-lg" %>
         <% end %> 
         </div>
-    </div>    
+    </div>   
+
+    <% if @user.errors.any? %>
+        <% if @user.errors.full_messages.each do |msg| %>
+            <p style="color: red"><%= msg %></p>
+            <% end %>
+        <% end %>
+    <% end  %>
