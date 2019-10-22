@@ -21,8 +21,8 @@ class ItemsController < ApplicationController
             flash[:notice] = "Item successfully created!"
             redirect_to user_item_path(current_user, @item)
         else
-            flash[:failure] = "Sorry something went wrong, please try again."
-            redirect_to new_item_path
+            @errors = @item.errors.full_messages
+            render 'new'
         end
     end
 

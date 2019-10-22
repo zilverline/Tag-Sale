@@ -15,8 +15,8 @@ class UsersController < ApplicationController
             flash[:notice] = "Welcome #{@user.name}!"
             redirect_to user_path(@user)
         else  
-            flash[:failure] = "Please enter valid credentials."         
-            render :new
+            @errors = @user.errors.full_messages         
+            render 'new'
         end
     end
 

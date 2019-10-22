@@ -22,10 +22,14 @@
         </div>
     </div>
 <% end %>
-
-    <% if @user.errors.any? %>
-        <% if @user.errors.full_messages.each do |msg| %>
-            <p style="color: red"><%= msg %></p>
+        
+        <% if @errors && !@errors.empty? %>
+<div class="errors">
+    <div class="thumbnail">
+            <% if @user.errors.full_messages.each do |error| %>
+                <p><%= error %></p>
+                <% end %>
             <% end %>
         <% end %>
-    <% end %>
+    </div>
+</div>

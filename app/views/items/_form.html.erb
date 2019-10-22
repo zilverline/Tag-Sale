@@ -1,9 +1,17 @@
+            <% if @errors && !@errors.empty? %>
+    <div class="errors">
+        <div class="thumbnail">
+                <% @errors.each do |error| %>
+                    <p><%= error %></p>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
 
     <%= form_for(@item) do |f| %>
         <div class="item">
         <div class="thumbnail">
             <div class="caption-item">
-                <%= render 'sessions/flash_message' %>
                 <div class="form-group">
                     <%= f.label :name %> :
                     <%= f.text_field :name, class: "form-control" %>
@@ -46,5 +54,6 @@
         </div>
     <% end %>
 </div>
+
 
 <%= link_to "GoTo My Page", user_path(current_user), class: "btn btn-primary" %>
