@@ -14,12 +14,16 @@ class SessionsController < ApplicationController
             
         else
             @user = User.find_by(name: params[:name])
-
-            if @user && @user.authenticate(params[:password])        
+        
+            if @user && @user.authenticate(params[:password]) 
+                
                 session[:user_id] = @user.id
+
+                flash[:notice] = "Successfully Logged in."
                 
                 redirect_to user_path(@user)
             else
+                flash[:failure] = "Please enter valid credentials."
                 render 'new'
             end
         end     

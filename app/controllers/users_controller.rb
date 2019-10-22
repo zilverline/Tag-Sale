@@ -12,8 +12,10 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             session[:user_id] = @user.id
-            redirect_to user_path(@user), notice: "User Created!"
-        else           
+            flash[:notice] = "Welcome #{@user.name}!"
+            redirect_to user_path(@user)
+        else  
+            flash[:failure] = "Please enter valid credentials."         
             render :new
         end
     end

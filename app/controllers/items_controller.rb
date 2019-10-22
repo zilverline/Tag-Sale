@@ -18,8 +18,10 @@ class ItemsController < ApplicationController
     def create 
         @item = current_user.items.build(item_params)
         if @item.save
-            redirect_to user_item_path(current_user, @item), notice: "Item Created!"
+            flash[:notice] = "Item successfully created!"
+            redirect_to user_item_path(current_user, @item)
         else
+            flash[:failure] = "Sorry something went wrong, please try again."
             redirect_to new_item_path
         end
     end

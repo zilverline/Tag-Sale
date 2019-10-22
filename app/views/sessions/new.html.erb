@@ -1,9 +1,11 @@
-<%= form_tag('/login', method: :post) do %>
+<%= form_tag(login_path, method: :post) do %>
     <div class="form-group">
         <div class="thumbnail">
             <div class="title-container">
                 <h1>Login to access your account and start selling!</h1>
             </div>
+                <%= render 'flash_message' %>
+
                 <div class="login">
                     <%= label_tag :name %> :
                     <%= text_field_tag :name %>
@@ -15,10 +17,3 @@
         <% end %> 
         </div>
     </div>   
-
-    <% if @user.errors.any? %>
-        <% if @user.errors.full_messages.each do |msg| %>
-            <p style="color: red"><%= msg %></p>
-            <% end %>
-        <% end %>
-    <% end  %>

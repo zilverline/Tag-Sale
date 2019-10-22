@@ -3,6 +3,7 @@
         <div class="item">
         <div class="thumbnail">
             <div class="caption-item">
+                <%= render 'sessions/flash_message' %>
                 <div class="form-group">
                     <%= f.label :name %> :
                     <%= f.text_field :name, class: "form-control" %>
@@ -45,12 +46,5 @@
         </div>
     <% end %>
 </div>
-
-<% if @item.errors.any? %>
-    <% if @item.errors.full_messages.each do |msg| %>
-        <p style="color: red"><%= msg %></p>
-        <% end %>
-    <% end %>
-<% end %>
 
 <%= link_to "GoTo My Page", user_path(current_user), class: "btn btn-primary" %>

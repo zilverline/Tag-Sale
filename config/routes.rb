@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   get '/auth/facebook/callback', to: 'sessions#create'
-  #post '/auth/facebook/callback', to: 'sessions#create'
 
   resources :users do
     resources :items
