@@ -18,6 +18,6 @@ class Item < ApplicationRecord
     end
 
     def self.search(search)  
-        where("lower(categories.name) LIKE :search OR lower(items.name) LIKE :search", search: "%#{search.downcase}%").uniq   
+        where("lower(items.description) LIKE :search OR lower(items.name) LIKE :search", search: "%#{search.downcase}%").uniq   
     end
 end
