@@ -1,12 +1,4 @@
-            <% if @errors && !@errors.empty? %>
-    <div class="errors">
-        <div class="thumbnail">
-                <% @errors.each do |error| %>
-                    <p><%= error %></p>
-                <% end %>
-            <% end %>
-        </div>
-    </div>
+        <%= render 'errors/errors' %>
 
     <%= form_for(@item) do |f| %>
         <div class="item">
