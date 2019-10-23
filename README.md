@@ -57,7 +57,6 @@ ruby '2.6.1'
 * https://rubygems.org
 * https://stackoverflow.com x 1000 ;)
 * https://www.favicon-generator.org
-* https://youtu.be/cWYiAVMSHD4  (sorting)
 * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 ### License
