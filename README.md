@@ -61,7 +61,12 @@ ruby '2.6.1'
 * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 ### License
+* MIT License
 
 ### Possible Future Changes or upgrades
 * email "masking" for anonymity
-* "tag sale inc." lists your items for sale across all online marketplaces and platforms.         (facebook marketplace,  craigslist, ebay, amazon(if new), etc.) We are the professionals!!
+* "Tag Sale Inc." lists your items for sale across all online marketplaces and              platforms.(facebook marketplace,  craigslist, ebay, amazon(if new), etc.) We 
+   are the professionals!!
+* Shopping Cart function
+* Paypal Omniauth
+* Seller Rating or feedback
