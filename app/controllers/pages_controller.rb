@@ -5,12 +5,10 @@ class PagesController < ApplicationController
             
             redirect_to items_path  
         else  
-            #@parameter = params[:search].downcase  
-            #@results = Item.joins(:category).search(params[:search]).sort("categories.name DESC")
-            @items = Item.where("name LIKE ?", "%" + params[:search] + "%")
-            #@items = Item.where("description LIKE ?", "%" + params[:search] + "%")
+            singular = params[:search].singularize.downcase
+            @items = Item.where("name LIKE ? OR description LIKE ?", "%" + singular + "%", "%" + singular + "%")
             
-            render 'search'
+            render :search
         end  
     end
 end

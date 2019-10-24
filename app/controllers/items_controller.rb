@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
             redirect_to user_item_path(current_user, @item)
         else
             @errors = @item.errors.full_messages
-            render 'new'
+            render :new
         end
     end
 

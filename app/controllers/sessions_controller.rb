@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
                 redirect_to user_path(@user)
             else
                 flash[:failure] = "Please enter valid credentials."
-                render 'new'                
+                render :new                
             end
         end     
     end

@@ -16,13 +16,12 @@ class UsersController < ApplicationController
             redirect_to user_path(@user)
         else  
             @errors = @user.errors.full_messages         
-            render 'new'
+            render :new
         end
     end
 
     def show 
         @user = User.find(params[:id])
-        #render :show
     end
 
     private 
