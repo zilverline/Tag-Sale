@@ -35,14 +35,15 @@
     }
 
     .nav-link:hover {
-        color: rgb(202, 12, 12);
+        color: #5c6ac4;
         text-decoration: none;
     }
 
     html,
     body {  
         height: 100%; 
-        background: url("background.jpeg") no-repeat center center fixed;    
+        background-color:#5c6ac4;
+        //background: url("background.jpeg") no-repeat center center fixed;    
         -webkit-background-size: cover; 
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -128,12 +129,12 @@
         font-size: 20px;
         margin-top: 2%;
         margin-bottom: 1%;
-        color: #082c6f;
+        color: #ffffff;
     }
 
     .btn-success {
-        background-color:#00d690;
-        border-color: #2b2967;
+        background-color:#212b35;
+        border-color: #212b35;
     }
 
     .btn-secondary {
@@ -149,7 +150,7 @@
     }
 
     a {
-        color: #0046ca;
+        color: #082C6f;
         text-decoration: none;
     }
 
@@ -177,6 +178,11 @@
     }
 
     .btn-info {
-        background-color:#00d690;
-        border-color:#00d690;
+        background-color:#5c6ac4;
+        border-color:#5c6ac4;
+    }
+    
+    .btn-info:hover {
+        background-color: #212b35;
+        border-color: white;
     }
