@@ -1,0 +1,2 @@
+<p>Seller: <%= link_to @item.user.name, user_path(@item.user) %></p>
+<p>Contact Seller: <%=  mail_to(@item.user.email, "Ask a question", class: 'btn btn-primary btn-success btn-lg', cc: "salesteam@tagsale.io", subject: @item.name, body: "****ALERT FROM TAG SALE****\n\n\nYou have questions from a TagSale.io user in reference to your item: #{@item.name}.\n\n\n\n Dear #{@item.user.name},\nI have some questions about #{@item.name}.") %></p>

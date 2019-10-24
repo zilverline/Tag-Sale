@@ -13,8 +13,10 @@
                 <p>Category: <%= @item.category_name %></p>               
                 <p>Condition: <%= item_condition(@item) %></p>
             
-                <%= render 'useritemshow' %>
+                <%= render_item %>
                 
+                <%= render 'pages/back_button' %>
+
             </div>
         </div>
     </div>

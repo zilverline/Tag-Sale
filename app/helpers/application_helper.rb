@@ -24,4 +24,20 @@ module ApplicationHelper
         return image_tag("tagsalelogo1.png", height:"50")
     end
 
+    def render_navbar
+        if logged_in?
+            render 'layouts/logged_in_navbar'
+        else
+            render 'layouts/logged_out_navbar'
+        end
+    end
+
+    def render_item
+        if current_user == @item.user
+            render 'items/current_user'
+        else
+            render 'items/not_current_user'
+        end
+    end
+
 end
