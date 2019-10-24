@@ -12,22 +12,7 @@
          <h4><%= sortable "created_at", "Sort by Newest" %></h4>
       </div>
 </div>
-   
-   <div class="items">
-      <% @items.each do |item| %>
-         <div class="item">
-            <div class="thumbnail">
-               <div class="caption">
-                  <%= image_present?(item) %>
-                  <p>
-                     <%= link_to item.name, item_path(item) %> - <%= time_ago_in_words(item.created_at) %> ago - <%= truncate(item.description, length: 25) %>
-                     - $<%= item.price %> - <%= link_to item.category_name, category_path(item.category) %>
-                     <p>Condition: <%= item_condition(item) %></p>
-                  </p>
-               </div>
-            </div>
-         </div>
-      <% end %>
-   </div>
+
+   <%= render 'allitems'%>
             
 

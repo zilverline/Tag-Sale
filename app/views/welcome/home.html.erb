@@ -29,12 +29,7 @@
         <p class="lead">Looking for a great deal on items, or you are hoping to sell an item?...<strong>Tag<%= logo %> it!!</strong><p> 
                         <p><strong>This is where you shop and save!</strong></p>
                           <%= link_to "Go Shopping Now", items_path, class: "btn btn-success btn-lg" %>
-                        <% if !logged_in? %>
-                          <%= link_to "Login via Facebook", "/auth/facebook", class: "btn btn-success btn-lg" %>
-                          <%= link_to "Start Selling Now", signup_path, class: "btn btn-success btn-lg" %>
-                        <% else %>
-                          <%= link_to "Sell Your Item Now", user_path(current_user), class: "btn btn-success btn-lg" %>
-                        <% end %>
+                          <%= render 'jumbotron'%>
     </header>
 
     <!-- Page Features -->

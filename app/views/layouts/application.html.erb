@@ -12,21 +12,15 @@
 
   <body>
         
-          <div class="topnav">
-            
+          <div class="topnav">            
               <div class="nav-link" >
                 <a href="/"><%=image_tag "tagsalelogo2.png", height:"70"%></a>
               </div>
                 <%= link_to 'Browse by Categories', categories_path, class: "nav-link" %>
                 <%= link_to 'All Items for Sale', items_path, class: "nav-link" %>
-              <% if !logged_in? %>
-                <%= link_to 'Sign Up', signup_path, class: "nav-link" %>
-                <%= link_to 'Sign in', login_path, class: "nav-link" %>
-                <%= link_to "Login via Facebook", "/auth/facebook", class: "nav-link" %>
-              <% else %>
-                <%= link_to "My DashBoard", user_path(current_user), class: "nav-link" %>
-                <%= link_to "Log Out", logout_path, method: :delete, class: "nav-link" %>
-              <% end %>
+
+                <%= render 'layouts/navbar' %>
+
                 <%= form_tag(search_page_path, :method => "get", class: 'navbar-form navbar-left') do %>  
                   <div class="input-group">  
                     <%= search_field_tag :search, params[:search], placeholder: "Search Items for Sale", class: "form-control" %>  
@@ -36,8 +30,6 @@
                   </div>  
                 <% end %>
           </div>
-        
-      
 
     <section class="container">
 
