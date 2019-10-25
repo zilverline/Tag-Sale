@@ -16,8 +16,5 @@ class Item < ApplicationRecord
     def category_name 
         self.category ? self.category.name : nil
     end
-
-    def self.search(search)  
-        where("lower(items.description) LIKE :search OR lower(items.name) LIKE :search", search: "%#{search.downcase}%, %#{search.downcase}%").uniq   
-    end
+    
 end
