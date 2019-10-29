@@ -32,12 +32,4 @@ module ApplicationHelper
         end
     end
 
-    def render_item
-        if current_user == @item.user
-            render 'items/current_user'
-        else
-            render 'items/not_current_user'
-        end
-    end
-
 end

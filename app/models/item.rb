@@ -16,5 +16,4 @@ class Item < ApplicationRecord
     def category_name 
         self.category ? self.category.name : nil
     end
-    
 end

@@ -17,14 +17,3 @@
         <% end %> 
         </div>
     </div> 
-
-        <% if @errors && !@errors.empty? %>
-<div class="errors">
-    <div class="thumbnail">
-            <% if @user.errors.full_messages.each do |error| %>
-                <p><%= error %></p>
-                <% end %>
-            <% end %>
-        <% end %>
-    </div>
-</div>  
