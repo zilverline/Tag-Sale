@@ -2,6 +2,7 @@
     <div class="thumbnail">
         <%= render 'sessions/flash_message' %>
         <h2><%= @item.name %></h2>
+        <p>Listed: <%= time_ago_in_words(@item.created_at) %> ago</p>
     </div>        
         <div class="thumbnail">
             <h4><%= link_to "Similar Items for" , category_path(@item.category) %><%= logo %></h4> 
