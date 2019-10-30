@@ -9,10 +9,12 @@ class Item < ApplicationRecord
     validates :name, length: { minimum: 2 }
     validates :description, length: { maximum: 300 }
     
+    #finds category by name if it exists or creates if not in database
     def category_name=(name)
         self.category = Category.find_or_create_by(name: name)
     end
-
+    
+    #if self.category is true, returns category.name else nil
     def category_name 
         self.category ? self.category.name : nil
     end

@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
     end 
 
     def create
+        #sets auth_hash to all of the users logged in info from facebook in this case.
         if auth_hash = request.env['omniauth.auth']
 
             @user = User.find_or_create_by_omniauth(auth_hash)

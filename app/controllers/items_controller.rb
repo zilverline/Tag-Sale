@@ -56,10 +56,12 @@ class ItemsController < ApplicationController
     end
 
     def sort_column
+        #checks if column name is included or present, if not defaults to "name" column
         Item.column_names.include?(params[:sort]) ? params[:sort] : "name"
     end
 
     def sort_direction
+        #checks to see if a direction param is selected or present, if not defaults to "asc"
         %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 
