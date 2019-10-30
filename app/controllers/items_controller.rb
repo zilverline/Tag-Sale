@@ -8,9 +8,15 @@ class ItemsController < ApplicationController
     before_action :find_item, only: [:show, :edit, :update, :destroy]
 
     def index 
-        @items = Item.order(sort_column + " " + sort_direction)
+        if params[:search]
+            @search = params[:search].singularize.downcase
+            @items = Item.where("name LIKE ? OR description LIKE ?", "%" + @search + "%", "%" + @search + "%")            
+        else  
+            @items = Item.order(sort_column + " " + sort_direction)
+            #render "items/sort"
+        end  
     end
-
+        
     def new 
         @item = Item.new 
     end
@@ -53,8 +59,8 @@ class ItemsController < ApplicationController
 
     def find_item
         @item = Item.find(params[:id])
-    end
-
+    end  
+    
     def sort_column
         #checks if column name is included or present, if not defaults to "name" column
         Item.column_names.include?(params[:sort]) ? params[:sort] : "name"

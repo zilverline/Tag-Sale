@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   
   root 'welcome#home'
-
-  get '/search', to: 'pages#search', :as => 'search_page'
   
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
@@ -21,5 +19,5 @@ Rails.application.routes.draw do
   resources :items
   resources :categories, only: [:index, :show]
   
-  #get '*path', to: redirect { |route, req| req.flash[:error] = "The URL \"/#{route[:path]}\" Was Not Found!"; '/' }
+  #get '*path', to:  '/' }
 end

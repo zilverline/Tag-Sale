@@ -21,7 +21,7 @@
 
                 <%= render_navbar %>
 
-                <%= form_tag(search_page_path, :method => "get", class: 'navbar-form navbar-left') do %>  
+                <%= form_tag(items_path, :method => "get", class: 'navbar-form navbar-left') do %>  
                   <div class="input-group">  
                     <%= search_field_tag :search, params[:search], placeholder: "Search Items for Sale", class: "form-control" %>  
                       <div class="input-group-btn">  

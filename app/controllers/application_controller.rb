@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
     protect_from_forgery with: :exception
-    helper_method :current_user, :logged_in?, :authenticate_user
+    helper_method :current_user, :logged_in?, :authenticate_user, :sort_column, :sort_direction
     
     private
 
@@ -17,5 +17,6 @@ class ApplicationController < ActionController::Base
         if !logged_in? 
         redirect_to root_path
         end 
-    end  
+    end 
+    
 end
